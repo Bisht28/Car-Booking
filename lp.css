@@ -2,6 +2,7 @@ body{
     background-color: #f1f3e9;
 }
 
-.bigcar{
-    position: absolute;
+.map{
+    display: block;
+    background-size: cover;
 }
