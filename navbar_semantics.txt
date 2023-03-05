@@ -1,11 +1,12 @@
 <div class="header">
-        <nav>
-            <h1 class="logo">Pool<span>Verse</span></h1>
-            <ul class="navbar">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">List</a></li>
-                <li><a href="#">Ride</a></li>
-                <li><a href="#"><button>Sign-Up</button></a></li>
-            </ul>
-        </nav>
-    </div>
+    <nav>
+        <h1 class="logo">Pool<span>Verse</span></h1>
+        <ul class="navbar">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Book</a></li>
+            <li><a href="#">List</a></li>
+            <li><a href="#">Rental</a></li>
+            <li><a href="#"><button>Sign-Up</button></a></li>
+        </ul>
+    </nav>
+</div>
