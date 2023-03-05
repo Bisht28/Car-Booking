@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+*{
+    /*box-sizing: border-box;*/
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+:root{
+    --main-color: #fe5b3d;
+    --second-color: #ffac38;
+    --text-color: #444;
+    --gradient: linear-gradient(#fe5b3d,#ffac38);
+}
+
+section{
+    padding: 50px 100px;
+}
+
+
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background:#eeeff1;
+    padding: 15px 100px;
+}
+
+.form-container form{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    bottom: 4rem;
+    left: 100px;
+    background: white;
+    padding: 35px;
+    border-radius: 0.5rem;
+}
+
+.input-box{
+    flex: 1 1 7rem;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.input-box span{
+    font-weight: 500;
+}
+
+.input-box input{
+    padding: 7px;
+    outline: none;
+    border: none;
+    background: blue;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+}
+
+
+.submit_btn{
+    flex: 12 1 70px;
+    padding: 10px 10px;
+    border: none;
+    border-radius: 0.5rem;
+    background: var(--second-color);
+    color: white;
+    font-size: 1 rem;
+    font-weight: 500;
+}
+
+.form-container form .btn:hover{
+    background: var(--main-color);
+}
+
+.heading{
+    text-align: centre;
+}
+
+.heading span{
+    font-weight: 500;
+    text-transform: uppercase;
+
+}
+
+.heading h1{
+    font-size: 2rem;
+    margin: 0;
+}
+.ride-container{
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit,minmax(250px,auto));
+    gap: 1 rem;
+    margin-top: 2rem;
+}
+.ride-container .box{
+    text-align: center;
+    padding: 20px;
+}
+
+.ride-container .box .bx{
+    font-size: 34px;
+    padding: 10px;
+    background: white;
+    border-radius: 0.5rem;
+    color: blue;  
+}
+.ride-container .box h2{
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin: 1.4rem 0 0.5rem;
+}
+
+.ride-container .box .bx:hover,
+.ride-container .box .bxs-car{
+background: green;
+color: white;
+
+}
+
