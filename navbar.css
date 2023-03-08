@@ -1,19 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
 body{
-    background-color: #FCFFE7;
-    width:100%;
-    font-family: 'Poppins', sans-serif;
-}
 
-.header{
-    width: 100%;
-}
-
-.logo{
-    font-size: 25px;
-    font-weight: bold;
-    padding-left: 10px;
-}
 
 nav{
     display: flex;
@@ -45,7 +32,6 @@ nav ul li a:hover{
     transition: .5s;
 }
 
-.sign-up{
     background-color:#EB455F;
     padding: 6px 16px;
     border: 0px;
