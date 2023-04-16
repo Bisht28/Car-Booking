@@ -10,16 +10,15 @@
 }
 
 :root{
-    --main-color: #fe5b3d;
+    --main-color: #EB455F;
     --second-color: #ffac38;
-    --text-color: #444;
+    --text-color: black;
     --gradient: linear-gradient(#fe5b3d,#ffac38);
 }
 
 section{
     padding: 50px 100px;
 }
-
 
 header{
     position: fixed;
@@ -40,6 +39,8 @@ header{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    height: 320px;
+    background-image: url(Car.png);
     gap: 1rem;
     bottom: 4rem;
     left: 100px;
@@ -54,6 +55,9 @@ header{
     flex-direction: column;
     padding: 20px;
 }
+::placeholder{
+    color: black;
+}
 
 .input-box span{
     font-weight: 500;
@@ -63,36 +67,21 @@ header{
     padding: 7px;
     outline: none;
     border: none;
-    background: blue;
+    background: var(--main-color);
     border-radius: 0.5rem;
     font-size: 1rem;
 }
 
 
 .submit_btn{
-    flex: 12 1 70px;
     padding: 10px 10px;
     border: none;
     border-radius: 0.5rem;
-    background: var(--second-color);
     color: white;
     font-size: 1 rem;
     font-weight: 500;
 }
 
-.form-container form .btn:hover{
-    background: var(--main-color);
-}
-
-.heading{
-    text-align: centre;
-}
-
-.heading span{
-    font-weight: 500;
-    text-transform: uppercase;
-
-}
 
 .heading h1{
     font-size: 2rem;
@@ -108,25 +97,5 @@ header{
 .ride-container .box{
     text-align: center;
     padding: 20px;
-}
-
-.ride-container .box .bx{
-    font-size: 34px;
-    padding: 10px;
-    background: white;
-    border-radius: 0.5rem;
-    color: blue;  
-}
-.ride-container .box h2{
-    font-size: 1.3rem;
-    font-weight: 500;
-    margin: 1.4rem 0 0.5rem;
-}
-
-.ride-container .box .bx:hover,
-.ride-container .box .bxs-car{
-background: green;
-color: white;
-
 }
 
