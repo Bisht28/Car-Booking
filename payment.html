@@ -28,34 +28,30 @@
                     <h2>Summary</h2>
                     <div class="item">
                         <div class="meta-col">
-                            <h3>Blue Ocean Shirt</h3>
-                            <p class="price">$60</p>
+                            <h3>Car Booked</h3>
+                            <p class="price">Maruti Suzuki Swift</p>
                         </div>
                     </div>
                     <div class="item">
                         <div class="meta-col">
-                            <h3>Green Pine Shirt</h3>
-                            <p class="price">$55</p>
+                            <h3>Source</h3>
+                            <p class="price">Thane</p>
                         </div>
                     </div>
                     <div class="item">
-                        
                         <div class="meta-col">
-                            <h3>Cow Skin Belt</h3>
-                            <p class="price">$32</p>
+                            <h3>Destination</h3>
+                            <p class="price">Bandra(W)</p>
                         </div>
                     </div>			
                     <div class="item">
-                        <div class="img-col">
-                            <img src="http://emilcarlsson.se/assets/green-shirt.png" alt="" />
-                        </div>
                         <div class="meta-col">
-                            <h3>Festina Quartz Watch</h3>
-                            <p class="price">$299</p>
+                            <h3>Pick-Up Time</h3>
+                            <p class="price">10:00am</p>
                         </div>
                     </div>
-                    <p id="total">Total</p>
-                    <h4 id="total-price"><span>$</span> 446</h4>
+                    <p id="total">Amount</p>
+                    <h2 id="total-price"><span>₹</span>446</h2>
                 </div>
             </div>
             <div id="right-col">
@@ -67,13 +63,12 @@
                 <form action="">
                     <label for="">Cardnumber</label>
                     <div id="cardnumber">
-                        <input type="number" max="99999999999999999" maxlength="16" min="0000000000000000" placeholder="9876543210987654"
+                        <input type="number" placeholder="9876543210987654"
                          style="width: calc(25% - -12rem)">
                     </div>
                     
                     <label for="">Cardholder</label>
-                    <input id="cardholder" type="text" placeholder="Your name" style="border: 1px solid lightgrey;
-                    border-radius: 2px;" />
+                    <input id="cardholder" type="text" placeholder="Your name";/>
                     <div class="left">
                         <label for="">Expiration Date</label>
                         <select name="month" id="month" onchange="" size="1">
@@ -108,11 +103,12 @@
                     
                     <div class="right">
                         <label id="cvc-label" for="">CVC <i class="fa fa-question-circle-o" aria-hidden="true"></i></label>
-                        <input id="cvc" type="text" placeholder="123" maxlength="3" />
+                        <input id="cvc" type="text" placeholder="123" maxlength="3" style="border-radius: 5px;
+                        border-color:lightgray;" />
                     </div>
                     <button id="purchase">Purchase</button>
                     <button id="paypal"><i class="fa fa-paypal" aria-hidden="true"></i> Pay with PayPal</button>
-                    <p id="support">Having problem with checkout? <a href="#">Contact our support</a>.</p>
+                    <p id="support">Having problem with checkout? <a href="index.html">Contact our support</a>.</p>
                 </form>
             </div>
         </div>
