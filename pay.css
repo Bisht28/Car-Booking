@@ -37,12 +37,14 @@ body {
 #left-col {
     width: 40%;
     min-width: 240px;
+    
     height: 100%;
     float: left;
     background: var(--gradient);
 }
     #left-col-cont {
         margin: 20px 25px;
+        padding-top: 20px;
     }
 
     h2 {
@@ -54,21 +56,15 @@ body {
         clear: both;
     }
 
-    .img-col {
-        width: 30%;
-        float: left;
-    }
-        img {
-            width: 100%;
-            max-height: 100px;
-        }
         .meta-col {
-            width: 70%;
-            float: right;
+            width: 13rem;
+            float: left;
+            font-size: 22px;
         }
             h3 {
                 font-size: 0.7em;
                 margin: 10px 0 0 5px;
+                
             }
             #container {
              
@@ -165,6 +161,7 @@ div#logotype {
 						font-weight: 600;
 						text-transform: uppercase;
 						margin: 14px 0 4px;
+                        color: black;
                     }
 						#cvc-label 
 							{
@@ -173,13 +170,18 @@ div#logotype {
 							}
                             #cardholder {
                                 width: calc(100% - 18px);
+                                background: white;
+                                color: black;
                             }
                             
                             #cvc {
                                 width: calc(100% - 18px);
+                                border-radius: 2px;
+                                border: 1px solid;
+                                
                             }
                             select {
-                                border: 1px solid lightgrey;
+                                border: 1px solid ;
                                 border-radius: 2px;
                                 background: none;
                                 width: 90px;
@@ -204,12 +206,13 @@ div#logotype {
                                 background: var(--second-color);
                                 color: white;
                                 margin: 0 0 8px;
-                                font-size: 0.9em;
+                                font-size: 1rem;
                             }
                             
                             #paypal {
                                 background: none;
                                 border: 1px solid lightgrey;
+                                font-size: 0.9rem;
                             }   
                             #paypal:hover {
                                     background: #003087;
@@ -218,7 +221,9 @@ div#logotype {
                                 }   
                                 p#support {
                                     font-size: 0.7em;
+                                    padding-top: 9px;
                                     text-align: center;
                                     color: rgba(0, 0, 0, .5);
                                 }
+                            
                                 
