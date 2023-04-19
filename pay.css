@@ -1,0 +1,230 @@
+
+:root{
+    --main-color: #EB455F;
+    --second-color: #ffac38;
+    --text-color: black;
+    --gradient: linear-gradient(#EB455F,#e12323);
+}
+
+.left {
+	width: 70%;
+	float: left;
+	clear: both;
+}
+
+.right {
+	width: 30%;
+	float: right;
+	margin-bottom: 25px;
+}
+
+body {
+	height: auto;
+	min-height: calc(100vh);
+	font-weight: 500;
+}
+
+#wrapper {
+    height: 100vh;
+    display: flex;
+    display: -webkit-flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+#left-col {
+    width: 40%;
+    min-width: 240px;
+    
+    height: 100%;
+    float: left;
+    background: var(--main-color);
+}
+    #left-col-cont {
+        margin: 20px 25px;
+        padding-top: 20px;
+    }
+
+    h2 {
+        margin: 25px 0 0 0;
+    }
+    
+    div.item {
+        margin: 30px 0;
+        clear: both;
+    }
+
+        .meta-col {
+            width: 13rem;
+            float: left;
+            font-size: 22px;
+        }
+            h3 {
+                font-size: 0.7em;
+                margin: 10px 0 0 5px;
+                
+            }
+            #container {
+             
+                height: 440px;
+                min-width: 600px;
+                width: 600px;
+                z-index: 1;
+                -webkit-box-shadow: 0px 3px 15px 	-1px rgba(0,0,0,0.2);
+                -moz-box-shadow: 0px 3px 15px -1px rgba(0,0,0,0.2);
+                box-shadow: 0px 3px 15px -1px rgba(0,0,0,0.2);
+            }
+            p {
+                font-size: 0.9em;
+                margin: 5px 0 0 5px;
+                opacity: .5;
+            }
+            p#total {
+                text-transform: uppercase;
+                text-align: left;
+                font-size: 0.7em;
+                opacity: .5;
+                margin: 115px 0 5px 0;
+            }
+
+            
+					h4#total-price {
+						text-align: left;
+						font-size: 2em;
+						margin: 0;
+                        color:black;
+                    }
+						span {
+							color: #1c2834;
+						}
+#right-col {
+    width: calc(60% - 50px);
+    min-width: 310px;
+    height: 100%;
+    margin: 20px 25px;
+    float: right;
+}
+
+h2 {
+    float: left;
+    margin: 6px 0 0 0;
+}
+
+div#logotype {
+    float: right;
+    margin: 4px 0 0 0;
+}
+    img {
+        width: 60px;
+        height: auto;
+    }       
+        #visa {
+            margin-top: -10px;
+        }
+        form {
+            margin: 80px auto 0;
+            width: 100%;
+        }
+            #cardnumber {
+                background: white;
+                width: 14rem;
+                padding: 4px 6px;
+                border-radius: 3px;
+                border: 1px solid lightgrey;
+            }
+                input {
+                    display: inline-block;
+                    width: calc(25% - -75px);
+                    padding: 4px 6px;
+                    letter-spacing: 6px;
+                    font-size: 0.9em;
+                    border: none;
+                    background: none;
+                }
+                    ::-webkit-input-placeholder {
+                        opacity: .5;
+                    }
+                    
+                    ::-moz-placeholder {
+                        opacity: .5;
+                    }
+                    
+                    ::-webkit-inner-spin-button,
+                    ::-webkit-outer-spin-button {
+                        -webkit-appearance: none;
+                    margin: 0;
+                    }
+                    label {
+						display: block;
+						font-size: 0.7em;
+						font-weight: 600;
+						text-transform: uppercase;
+						margin: 14px 0 4px;
+                        color: black;
+                    }
+						#cvc-label 
+							{
+								cursor: pointer;
+								margin-left: 3px;
+							}
+                            #cardholder {
+                                width: calc(100% - 18px);
+                                background: white;
+                                color: black;
+                            }
+                            
+                            #cvc {
+                                width: calc(100% - 18px);
+                                border-radius: 2px;
+                                border: 1px solid;
+                                
+                            }
+                            select {
+                                border: 1px solid ;
+                                border-radius: 2px;
+                                background: none;
+                                width: 90px;
+                                font-weight: 500;
+                                font-size: 0.9em;
+                                padding: 6px 8px;
+                                color: rgba(0, 0, 0, .2);
+                                -webkit-appearance: none;
+                               -moz-appearance:    none;
+                               appearance:         none;
+                            }
+                            
+                            button {
+                                display: block;
+                                width: 100%;
+                                border: none;
+                                border-radius: 2px;
+                                padding: 8px 0;
+                                font-size: 0.8em;
+                            }
+                            #purchase {
+                                background: var(--second-color);
+                                color: white;
+                                margin: 0 0 8px;
+                                font-size: 1rem;
+                            }
+                            
+                            #paypal {
+                                background: none;
+                                border: 1px solid lightgrey;
+                                font-size: 0.9rem;
+                            }   
+                            #paypal:hover {
+                                    background: #003087;
+                                    border-color: #003087;
+                                    color: white;
+                                }   
+                                p#support {
+                                    font-size: 0.7em;
+                                    padding-top: 9px;
+                                    text-align: center;
+                                    color: rgba(0, 0, 0, .5);
+                                }
+                            
+                                

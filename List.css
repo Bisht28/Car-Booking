@@ -1,0 +1,31 @@
+*{
+    /*box-sizing: border-box;*/
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;  
+}
+
+:root{
+    --main-color: #EB455F;
+    --second-color: #ffac38;
+    --text-color: black;
+    --gradient: linear-gradient(#fe5b3d,#ffac38);
+}
+
+.form-container form{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 220px;
+    background-image: url(Car.png);
+    gap: 1rem;
+    bottom: 1rem;
+    left: 10px;
+    background: white;
+    padding: 35px;
+    border-radius: 0.5rem;
+}

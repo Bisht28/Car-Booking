@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="pay.css">
+    <link rel="stylesheet" href="navbar.css">
+</head>
+<body>
+    <div class="header">
+        <nav>
+            <h1 class="logo">Pool<span>Verse</span></h1>
+            <ul class="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Ride.html">Book</a></li>
+                <li><a href="#">List</a></li>
+                <li><a href="#">Rental</a></li>
+                <li><a href="#"><button>Sign-Up</button></a></li>
+            </ul>
+        </nav>
+    </div>
+    <div id="wrapper">
+        <div id="container">
+            <div id="left-col">
+                <div id="left-col-cont">
+                    <h2>Summary</h2>
+                    <div class="item">
+                        <div class="meta-col">
+                            <h3>Car Booked</h3>
+                            <p class="price">Maruti Suzuki Swift</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="meta-col">
+                            <h3>Source</h3>
+                            <p class="price">Thane</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="meta-col">
+                            <h3>Destination</h3>
+                            <p class="price">Bandra(W)</p>
+                        </div>
+                    </div>			
+                    <div class="item">
+                        <div class="meta-col">
+                            <h3>Pick-Up Time</h3>
+                            <p class="price">10:00am</p>
+                        </div>
+                    </div>
+                    <p id="total">Amount</p>
+                    <h2 id="total-price">₹ 446</h2>
+                </div>
+            </div>
+            <div id="right-col">
+                <h2>Payment</h2>
+                <div id="logotype">
+                    
+                </div>
+                
+                <form action="">
+                    <label for="">Cardnumber</label>
+                    <div id="cardnumber">
+                        <input type="number" placeholder="9876543210987654"
+                         style="width: calc(25% - -12rem)">
+                    </div>
+                    
+                    <label for="">Cardholder</label>
+                    <input id="cardholder" type="text" placeholder="Your name";/>
+                    <div class="left">
+                        <label for="">Expiration Date</label>
+                        <select name="month" id="month" onchange="" size="1">
+                            <option value="00">Month</option>
+                        <option value="01">January</option>
+                        <option value="02">February</option>
+                        <option value="03">March</option>
+                        <option value="04">April</option>
+                        <option value="05">May</option>
+                        <option value="06">June</option>
+                        <option value="07">July</option>
+                        <option value="08">August</option>
+                        <option value="09">September</option>
+                        <option value="10">October</option>
+                        <option value="11">November</option>
+                        <option value="12">December</option>
+                        </select>
+                        <select name="year" id="year" onchange="" size="1">
+                            <option value="00">Year</option>
+                        <option value="01">2016</option>
+                        <option value="02">2017</option>
+                        <option value="03">2018</option>
+                        <option value="04">2019</option>
+                        <option value="05">2020</option>
+                        <option value="06">2021</option>
+                        <option value="07">2022</option>
+                        <option value="08">2023</option>
+                        <option value="09">2024</option>
+                        <option value="10">2025</option>
+                        </select>
+                    </div>
+                    
+                    <div class="right">
+                        <label id="cvc-label" for="">CVC <i class="fa fa-question-circle-o" aria-hidden="true"></i></label>
+                        <input id="cvc" type="text" placeholder="123" maxlength="3" style="border-radius: 5px;
+                        border-color:lightgray;" />
+                    </div>
+                    <button id="purchase">Purchase</button>
+                    <button id="paypal"><i class="fa fa-paypal" aria-hidden="true"></i> Pay with PayPal</button>
+                    <p id="support">Having problem with checkout? <a href="index.html">Contact our support</a>.</p>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
