@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="listing.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+        <nav>
+            <h1 class="logo">Pool<span>Verse</span></h1>
+            <ul class="navbar">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Book</a></li>
+                <li><a href="#">List</a></li>
+                <li><a href="#">Rental</a></li>
+                <li><a href="#"><button>Sign-Up</button></a></li>
+            </ul>
+        </nav>
+    </div>
+        <br>
+        <br>
+        <form action="submit-car-info.php" method="post">
+            <label for="car-make">Phone Number:</label>
+            <input type="number" id="car-make" name="phone-number" required>
+            <label for="car-make">Number Plate:</label>
+            <input type="text" id="car-make" name="car-number_plate" required>
+            <label for="car-model">Model:</label>
+            <input type="text" id="car-model" name="car-model" required>
+            <label for="car-seats">Number of seats:</label>
+            <input type="number" id="car-seats" name="car-seats" min="1" max="8" required>
+            <label for="car-year">Source:</label>
+            <input type="text" id="car-year" name="source" required>
+            <label for="car-color">Destination:</label>
+            <input type="text" id="car-color" name="destination" required>
+            <label for="car-year">Date:</label>
+            <input type="date" id="car-year" name="date" required>
+            <label for="car-color">Time:</label>
+            <input type="time" id="car-color" name="time" required>
+            <label for="car-description">Car Description</label>
+            <textarea id="car-description" name="car-description" rows="5" required></textarea>
+            <input type="Submit" value="Submit">
+          </form>
+          <br>
+          <br>
+
+</body>
+</html>
