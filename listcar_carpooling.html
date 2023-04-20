@@ -23,7 +23,7 @@
     </div>
         <br>
         <br>
-        <form action="submit-car-info.php" method="post">
+        <form action="http://localhost:5000/submit" method="post">
             <label for="car-make">Phone Number:</label>
             <input type="number" id="car-make" name="phone-number" required>
             <label for="car-make">Number Plate:</label>
@@ -40,12 +40,10 @@
             <input type="date" id="car-year" name="date" required>
             <label for="car-color">Time:</label>
             <input type="time" id="car-color" name="time" required>
-            <label for="car-description">Car Description</label>
-            <textarea id="car-description" name="car-description" rows="5" required></textarea>
             <input type="Submit" value="Submit">
           </form>
           <br>
           <br>
-
+        <script src="submit.js"></script>
 </body>
 </html>
