@@ -29,8 +29,15 @@ const riderRequestSchema= new mongoose.Schema({
     time:String,
 });
 
+const userSchema = new mongoose.Schema({
+  username: String,
+  email: String,
+  password: String,
+});
+
 const Car = mongoose.model("Car", carSchema);
 const RideReq = mongoose.model("RideReq", riderRequestSchema);
+const User = mongoose.model('User', userSchema);
 
 app.post("/submit", async (req, res) => {
   try {
@@ -70,13 +77,11 @@ app.post("/rider-request", async (req,res)=> {
     try {
       const newRideReq = new RideReq({
         source: req.body.source,
-        destination: req.body.destination,
-        date: req.body.date
+        destination: req.body.destination
       });
       const matches= await Car.find({
         source: newRideReq.source,
-        destination: newRideReq.destination,
-        date: newRideReq.date
+        destination: newRideReq.destination
       });
       console.log(matches)
       res.json(matches);
@@ -84,6 +89,21 @@ app.post("/rider-request", async (req,res)=> {
       console.log(error);
     }
 });
+
+app.post("/register",async (req,res)=>{
+  try {
+    const newUser = new User({
+      username:req.body.username,
+      email:req.body.email,
+      password:req.body.password,
+    });
+    await newUser.save();
+    res.send("User data saved successfully");
+  } catch (error) {
+    console.log(error);
+    res.status(500).send("Error saving user data");
+  }
+})
 
 app.listen(5000, () => {
   console.log("server is listening to port 5000");
