@@ -26,13 +26,14 @@
             <p>Please enter your credentials to login.</p>
           </div>
         </div>
-        <form class="login-form">
-          <input type="text" placeholder="Username"/>
-          <input type="password" placeholder="Password"/>
-          <button>login</button>
-          <p class="message">Not registered? <a href="#">Create an account</a></p>
+        <form class="login-form" action="http://localhost:5000/login" method="post">
+          <input type="text" name="Username" required placeholder="Username"/>
+          <input type="password" name="Password" required placeholder="Password"/>
+          <button value="Submit" type="submit">login</button>
+          <p class="message">Not registered? <a href="regform.html">Create an account</a></p>
         </form>
       </div>
     </div>
+  <script src="login.js"></script>
 </body>
 </html>

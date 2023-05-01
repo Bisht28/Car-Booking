@@ -18,6 +18,7 @@ const carSchema = new mongoose.Schema({
   carSeats: Number,
   source: String,
   destination: String,
+  price: Number,
   date: Date,
   time: String,
 });
@@ -26,7 +27,7 @@ const riderRequestSchema= new mongoose.Schema({
     source:String,
     destination:String,
     date:Date,
-    time:String,
+    seats: Number,
 });
 
 const userSchema = new mongoose.Schema({
@@ -48,6 +49,7 @@ app.post("/submit", async (req, res) => {
       carSeats: req.body.carSeats,
       source: req.body.source,
       destination: req.body.destination,
+      price: req.body.price,
       date: req.body.date,
       time: req.body.time,
     });
@@ -65,7 +67,7 @@ app.post("/rider-request", async (req,res)=> {
            source: req.body.source,
            destination: req.body.destination,
            date: req.body.date,
-           time: req.body.time
+           seats: req.body.seats,
         });
         await newRideReq.save();
         //res.send("Request Received");
@@ -77,11 +79,13 @@ app.post("/rider-request", async (req,res)=> {
     try {
       const newRideReq = new RideReq({
         source: req.body.source,
-        destination: req.body.destination
+        destination: req.body.destination,
+        date: req.body.date
       });
       const matches= await Car.find({
         source: newRideReq.source,
-        destination: newRideReq.destination
+        destination: newRideReq.destination,
+        date: newRideReq.date
       });
       console.log(matches)
       res.json(matches);
@@ -103,6 +107,18 @@ app.post("/register",async (req,res)=>{
     console.log(error);
     res.status(500).send("Error saving user data");
   }
+})
+
+app.post("/login", async (req,res)=>{
+  const username= req.body.username
+  const pass=req.body.password
+    const user = await User.findOne({ 
+    username:username});
+    if (user && pass===user.password) {
+      res.status(200).send({message:"Login successful"});
+    } else {
+      res.render('login', { error: 'Invalid email or password'});
+    }
 })
 
 app.listen(5000, () => {
