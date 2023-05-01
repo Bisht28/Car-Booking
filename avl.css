@@ -8,13 +8,8 @@
 .wrapper {
     height: 100vh;
     display: flex;
-    display: -webkit-flex;
-    -webkit-align-items: center;
     align-items: center;
-    -webkit-justify-content: center;
     justify-content: center;
-    flex-direction: column;
-}
 
 .container {   
     height: 300px;
@@ -34,14 +29,10 @@
 	clear: both;
 }
 
-.right {
-	width: 30%;
-	float: right;
-	margin-bottom: 25px;
-}
 
-.left-col {
-    width: 40%;
+#left-col {
+    border-radius: 0.5rem;
+    width: 30%;
     min-width: 240px;
     height: 100%;
     float: left;
@@ -74,21 +65,29 @@ div.item {
         margin: 5px 0 0 0;
     }
     #total {
+       
         text-align:start;
         font-size: 1.4rem;
         margin: 22px 0 0 0;
 }
 
 #right-col {
-    
+    align-items: center;
     width: 10rem;
     height: 71px;
     margin: 20px 0px;
     float: right;
-    transform: translate(0, -90%);
+    transform: translate(-10%, 130%);
 }
 h2 {
     float: left;
     margin: 6px 0 0 0;
+}
+
+.img{
+    position: absolute;
+    width: 620px;
+    height: 300px;
+    margin: 20px,20px;
 }
 
