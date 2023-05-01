@@ -18,6 +18,7 @@ const carSchema = new mongoose.Schema({
   carSeats: Number,
   source: String,
   destination: String,
+  price: Number,
   date: Date,
   time: String,
 });
@@ -26,11 +27,18 @@ const riderRequestSchema= new mongoose.Schema({
     source:String,
     destination:String,
     date:Date,
-    time:String,
+    seats: Number,
+});
+
+const userSchema = new mongoose.Schema({
+  username: String,
+  email: String,
+  password: String,
 });
 
 const Car = mongoose.model("Car", carSchema);
 const RideReq = mongoose.model("RideReq", riderRequestSchema);
+const User = mongoose.model('User', userSchema);
 
 app.post("/submit", async (req, res) => {
   try {
@@ -41,6 +49,7 @@ app.post("/submit", async (req, res) => {
       carSeats: req.body.carSeats,
       source: req.body.source,
       destination: req.body.destination,
+      price: req.body.price,
       date: req.body.date,
       time: req.body.time,
     });
@@ -58,7 +67,7 @@ app.post("/rider-request", async (req,res)=> {
            source: req.body.source,
            destination: req.body.destination,
            date: req.body.date,
-           time: req.body.time
+           seats: req.body.seats,
         });
         await newRideReq.save();
         //res.send("Request Received");
@@ -70,18 +79,51 @@ app.post("/rider-request", async (req,res)=> {
     try {
       const newRideReq = new RideReq({
         source: req.body.source,
-        destination: req.body.destination
+        destination: req.body.destination,
+        date: req.body.date,
+        seats: req.body.seats
       });
       const matches= await Car.find({
         source: newRideReq.source,
-        destination: newRideReq.destination
+        destination: newRideReq.destination,
+        date: newRideReq.date
       });
-      console.log(matches)
-      res.json(matches);
+      const newMatches=matches.filter(function(match){
+        return newRideReq.seats<=match.carSeats;
+      })
+      console.log(newMatches)
+      res.json(newMatches);
     } catch (error) {
       console.log(error);
     }
 });
+
+app.post("/register",async (req,res)=>{
+  try {
+    const newUser = new User({
+      username:req.body.username,
+      email:req.body.email,
+      password:req.body.password,
+    });
+    await newUser.save();
+    res.send("User data saved successfully");
+  } catch (error) {
+    console.log(error);
+    res.status(500).send("Error saving user data");
+  }
+})
+
+app.post("/login", async (req,res)=>{
+  const username= req.body.username
+  const pass=req.body.password
+    const user = await User.findOne({ 
+    username:username});
+    if (user && pass===user.password) {
+      res.status(200).send({message:"Login successful"});
+    } else {
+      res.render('login', { error: 'Invalid email or password'});
+    }
+})
 
 app.listen(5000, () => {
   console.log("server is listening to port 5000");

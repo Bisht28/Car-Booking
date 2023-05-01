@@ -8,6 +8,7 @@
     <!--Link to CSS-->
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="ride.css">
+    <link rel="stylesheet" href="avl.css">
     <!--Link to Icons-->
     <link rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
@@ -19,8 +20,8 @@
             <h1 class="logo">Pool<span>Verse</span></h1>
             <ul class="navbar">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="ListCar_for_carpooling.html">List</a></li>
-                <li><a href="Ride.html">Ride</a></li>
+                <li><a href="Ride.html">Book</a></li>
+                <li><a href="listcar_carpooling.html">List</a></li>
                 <li><a href="#"><button>Sign-Up</button></a></li>
             </ul>
         </nav>
@@ -45,14 +46,17 @@
                 </div>
                 <div class="input-box">
                     <span>No. Of Seats</span>
-                    <input type="number" name="quantity" id="" min="1" max="4">
+                    <input type="number" name="num_seats" id="" min="1" placeholder="No of seats">
                 </div>
                 <div class="submit_btn">
                     <input type="Submit" value="Submit">Submit</input>
                 </div>
             </form>
         </div>
-    </section>   
+    </section> 
+    <span><h2 class="result-header">Results</h2></span>
+    <div class="wrapper">
+    </div>  
 <script src="search.js"></script> 
 </body>
 </html>

@@ -12,6 +12,7 @@ form.addEventListener("submit", (event) => {
     carSeats: formData.get("car-seats"),
     source: formData.get("source"),
     destination: formData.get("destination"),
+    price: formData.get("price"),
     date: formData.get("date"),
     time: formData.get("time"),
   }; // Convert the form data to JSON
@@ -25,8 +26,8 @@ form.addEventListener("submit", (event) => {
   })
     .then((response) => response.text())
     .then((data) => {
-      console.log(data); // Log the response from the server
-      form.reset();
+      //console.log(data); // Log the response from the server
+      window.location.href="index.html"
     })
     .catch((error) => console.error(error));
 });
