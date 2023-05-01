@@ -105,6 +105,18 @@ app.post("/register",async (req,res)=>{
   }
 })
 
+app.post("/login", async (req,res)=>{
+  const username= req.body.username
+  const pass=req.body.password
+    const user = await User.findOne({ 
+    username:username});
+    if (user && pass===user.password) {
+      res.status(200).send({message:"Login successful"});
+    } else {
+      res.render('login', { error: 'Invalid email or password'});
+    }
+})
+
 app.listen(5000, () => {
   console.log("server is listening to port 5000");
 });

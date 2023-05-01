@@ -17,7 +17,6 @@ form.addEventListener("submit", (event) => {
         },
         body: JSON.stringify(searchData),
     })
-
         .then(response => response.json())
         .then((data) => {
             //console.log(typeof data);

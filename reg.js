@@ -46,7 +46,7 @@ form.addEventListener("submit",(event)=>{
     .then((response) => response.text())
     .then((data) => {
       console.log(data); // Log the response from the server
-      form.reset();
+      window.location.href="/login.html"
     })
     .catch((error) => console.error(error));
 })
