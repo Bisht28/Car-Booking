@@ -25,8 +25,8 @@ form.addEventListener("submit", (event) => {
   })
     .then((response) => response.text())
     .then((data) => {
-      console.log(data); // Log the response from the server
-      form.reset();
+      //console.log(data); // Log the response from the server
+      window.location.href="index.html"
     })
     .catch((error) => console.error(error));
 });

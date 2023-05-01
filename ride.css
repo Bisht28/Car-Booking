@@ -33,6 +33,10 @@ header{
     padding: 15px 100px;
 }
 
+.result-header{
+    margin-left: 100px;
+}
+
 .form-container form{
     margin-top: 10px;
     margin-bottom: 10px;
