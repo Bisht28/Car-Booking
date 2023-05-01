@@ -125,6 +125,12 @@ app.post("/login", async (req,res)=>{
     }
 })
 
+app.post("/book-now", async (req,res)=>{
+  const id=req.body.id;
+  const seats=req.body.seats
+  await Car.updateOne({'_id':id},{$inc:{'carSeats':-seats}})
+})
+
 app.listen(5000, () => {
   console.log("server is listening to port 5000");
 });

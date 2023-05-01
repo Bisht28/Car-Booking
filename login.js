@@ -1,5 +1,6 @@
 const form=document.querySelector("form");
-const login_btn=document.getElementById("login_btn");
+//const login_btn=document.getElementById("login_btn");
+const loginError=document.getElementById("loginError");
 form.addEventListener("submit",(event)=>{
     event.preventDefault()
     const formData= new FormData(form);
@@ -17,12 +18,13 @@ form.addEventListener("submit",(event)=>{
     })
     .then(response=>{
         if(response.ok){
-            console.log("login successful");
             window.location.href="/index.html"
-            login_btn.style.display="none";
+            console.log("login successful");
+            //login_btn.style.display="none";
         }
         else{
             console.log("Login Failed");
+            loginError.textContent='Invalid Login'
         }
     })
     .catch((error)=>console.log(error));

@@ -1,4 +1,16 @@
 const form = document.querySelector("form");
+
+function bookNow(event) 
+{
+    console.log("hello")
+    fetch("http://localhost:5000/book-now", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({id:event.target.getAttribute('data-id'),seats:event.target.getAttribute('data-seats')}),
+    })
+}
 form.addEventListener("submit", (event) => {
     event.preventDefault();
 
@@ -29,37 +41,16 @@ form.addEventListener("submit", (event) => {
             arr.forEach((ele) => {
                 //console.log(arr);
                 console.log(ele);
-                const element=`<div class="container">
-                <div id="left-col">
-                    <div id="left-col-cont">
-                        <h2>Car Model : ${ele.carModel}</h2>
-                        <div class="item">
-                            <div class="meta-col">
-                                <h3>Source</h3>
-                                ${ele.source}
-                            </div>
-                            <div class="meta-col">
-                                <h3>Destination</h3>
-                                ${ele.destination}
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="meta-col">
-                                <h3>Date</h3>
-                                <p class="price">${ele.date}</p>
-                            </div>
-                        </div>
-                        <p id="total"><b>Time</b></p>
-                        <p style="font-size: 1.2rem; margin: 8px;">${ele.time}</p>
-                    </div>
-                </div>
-                <div id="right-col">
-                <button><a href="payment.html"><h3>Book Now</h3></a></button>    
-                </div>
-            </div>`
+
             elarr.push(element)
             });
             wrapper.innerHTML=elarr.join("")
+            const bookButton=document.querySelectorAll('#book')
+            bookButton.forEach((button)=>{
+                button.addEventListener('click', bookNow)
+            })
         })
         .catch((error) => console.error(error));
 });
+
+
