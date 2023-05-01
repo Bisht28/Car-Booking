@@ -41,23 +41,7 @@ form.addEventListener("submit", (event) => {
             arr.forEach((ele) => {
                 //console.log(arr);
                 console.log(ele);
-                const element=`
-                <div class="container">
-                <div class="col1">
-           <h2>Car Model: ${ele.carModel}</h2>
-           <h3>Source: ${ele.source}</h3>
-           <h3>Date: ${ele.date}</h3>
-           <h3>Seats Available: ${ele.carSeats}</h3>
-        </div>
-        <div class="col2">
-            <h2>Car No: ${ele.numberPlate}</h2>
-            <h3>Destination:${ele.destination}</h3>
-            <h3>Time: ${ele.time}</h3>
-            <h3>Total Amount:${ele.price*searchData.seats}</h3>
-        </div>
-        <div class="col3">
-        <button type="button" data-id="${ele._id}" data-seats="${searchData.seats}" id="book">Book Now</button>
-        </div> </div>`
+
             elarr.push(element)
             });
             wrapper.innerHTML=elarr.join("")
