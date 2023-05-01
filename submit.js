@@ -12,6 +12,7 @@ form.addEventListener("submit", (event) => {
     carSeats: formData.get("car-seats"),
     source: formData.get("source"),
     destination: formData.get("destination"),
+    price: formData.get("price"),
     date: formData.get("date"),
     time: formData.get("time"),
   }; // Convert the form data to JSON

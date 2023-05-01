@@ -8,7 +8,7 @@ form.addEventListener("submit", (event) => {
         source: formData.get("source"),
         destination: formData.get("destination"),
         date: formData.get("date"),
-        time: formData.get("time")
+        seats: formData.get("num_seats")
     };
     fetch("http://localhost:5000/rider-request", {
         method: "POST",
