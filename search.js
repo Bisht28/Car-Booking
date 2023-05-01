@@ -54,7 +54,7 @@ form.addEventListener("submit", (event) => {
                     </div>
                 </div>
                 <div id="right-col">
-                <button><a href="congo.html"><h3>Book Now</h3></a></button>    
+                <button><a href="payment.html"><h3>Book Now</h3></a></button>    
                 </div>
             </div>`
             elarr.push(element)
