@@ -80,15 +80,19 @@ app.post("/rider-request", async (req,res)=> {
       const newRideReq = new RideReq({
         source: req.body.source,
         destination: req.body.destination,
-        date: req.body.date
+        date: req.body.date,
+        seats: req.body.seats
       });
       const matches= await Car.find({
         source: newRideReq.source,
         destination: newRideReq.destination,
         date: newRideReq.date
       });
-      console.log(matches)
-      res.json(matches);
+      const newMatches=matches.filter(function(match){
+        return newRideReq.seats<=match.carSeats;
+      })
+      console.log(newMatches)
+      res.json(newMatches);
     } catch (error) {
       console.log(error);
     }
