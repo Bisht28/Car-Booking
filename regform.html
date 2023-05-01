@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="regform.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="column1">
+            <form id="form" class="form" action="http://localhost:5000/register" method="post">
+                <h2>Register with us</h2>
+                <div class="form-control">
+                    <label for='username'>Username</label>
+                    <input type="text" id="username" placeholder="Enter username" name="username" required>
+                    <small>Error message</small>
+                </div>
+                <div class="form-control">
+                    <label for='email'>Email</label>
+                    <input type="email" id="email" placeholder="Enter email" name="email" required>
+                    <small>Error message</small>
+                </div>
+                <div class="form-control">
+                    <label for='password'>Password</label>
+                    <input type="password" id="password" placeholder="Enter password" name="password" required>
+                    <span id="passwordError" style="color: red;"></span>
+                </div>
+                <div class="form-control">
+                    <label for='password2'>Confirm Password</label>
+                    <input type="password" id="password2" placeholder="Enter password again " name="password2" required>
+                    <span id="confirmPasswordError" style="color: red;"></span>
+                </div>
+                <button id="signup" type="submit" value="Submit">Sign Up</button>
+            </form>
+        </div>
+        <div class="column2">
+
+            <img src="https://i.ibb.co/k5NNz4F/pablo-sign-up.png" alt="pablo-sign-up" border="0" class='signup-image'>
+        </div>
+
+    </div>
+    <script src="reg.js"></script>
+</body>
+</html>
