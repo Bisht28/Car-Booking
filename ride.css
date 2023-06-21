@@ -20,6 +20,11 @@ section{
     padding: 50px 100px;
 }
 
+.submit_btn:hover{
+    transform: scale(1.1);
+    transition: .5s;
+}
+
 header{
     position: fixed;
     width: 100%;

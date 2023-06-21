@@ -58,6 +58,10 @@ button{
     margin-right: 20px;
 }
 
+#login_btn.hide{
+    display: none;
+}
+
 button:hover{
     transform: scale(1.1);
     transition: .5s;

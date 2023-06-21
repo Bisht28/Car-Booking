@@ -1,5 +1,5 @@
 const form=document.querySelector("form");
-//const login_btn=document.getElementById("login_btn");
+const login_btn=document.getElementById("login_btn")
 const loginError=document.getElementById("loginError");
 form.addEventListener("submit",(event)=>{
     event.preventDefault()
@@ -18,9 +18,9 @@ form.addEventListener("submit",(event)=>{
     })
     .then(response=>{
         if(response.ok){
-            window.location.href="/index.html"
             console.log("login successful");
-            //login_btn.style.display="none";
+            window.location.href="/index.html"
+            login_btn.classList.add("hidden");
         }
         else{
             console.log("Login Failed");
